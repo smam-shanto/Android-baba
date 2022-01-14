@@ -1,4 +1,4 @@
-package com.example.rest_api_app
+package com.androidbaba.bottomnavi
 
 import io.flutter.embedding.android.FlutterActivity
 
