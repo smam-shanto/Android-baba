@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
+import 'package:carousel_images/carousel_images.dart';
 
 class home extends StatefulWidget {
 
@@ -10,6 +10,13 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  final List<String> listImages =[
+    'images/android.jpg',
+    'images/punnamedd.jpg',
+    'images/unnamed.jpg',
+    'images/vsunnamed.jpg', 
+    'images/wunnamexyz.jpg', 
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,18 +34,16 @@ class _homeState extends State<home> {
                 SizedBox(
                 height: 220.0,
                 width: double.infinity,
-                child: Carousel(
-                  dotSize: 5.0,
-                  dotSpacing: 9.0,
-                  dotPosition: DotPosition.bottomCenter,
-                  images: [
-                    Image.asset('images/android.jpg', fit: BoxFit.cover),
-                    Image.asset('images/punnamedd.jpg', fit: BoxFit.cover),
-                    Image.asset('images/unnamed.jpg', fit: BoxFit.cover),
-                    Image.asset('images/vsunnamed.jpg', fit: BoxFit.cover),
-                    Image.asset('images/wunnamexyz.jpg', fit: BoxFit.cover),
-                    
-                  ],
+                child: CarouselImages(
+                  scaleFactor: 0.1,
+            listImages: listImages,
+            height: 300.0,
+            borderRadius: 5.0,
+            cachedNetworkImage: false,
+            verticalAlignment: Alignment.bottomCenter,
+            onTap: (index) {
+              print('Tapped on page $index');
+            },
                 ),
               ),
               Column(

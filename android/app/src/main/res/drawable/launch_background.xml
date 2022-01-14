@@ -7,6 +7,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/androidss" />
+            android:src="@mipmap/androidssp" />
     </item> -->
 </layer-list>
